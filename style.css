@@ -223,7 +223,9 @@ footer a:hover{
 
 /* toggle classes */
 .hide{
-    opacity: 0;
+    position: absolute !important;
+    opacity: 0 !important;
+    z-index: -1 !important;
 }
 
 
