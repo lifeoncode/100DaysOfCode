@@ -2,192 +2,319 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Job Listings</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
 
-  <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  Python
-  <!-- Tools -->
-  React
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Account
-  New!
-  Junior Frontend Developer
-  2d ago
-  Part Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  MyHome
-  Junior Frontend Developer
-  5d ago
-  Contract
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  CSS
-  JavaScript
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Loop Studios
-  Software Engineer
-  1w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Ruby
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  FaceIt
-  Junior Backend Developer
-  2w ago
-  Full Time
-  UK only
-  <!-- Role -->
-  Backend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  Ruby
-  <!-- Tools -->
-  RoR
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Shortly
-  Junior Developer
-  2w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  HTML
-  JavaScript
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Insure
-  Junior Frontend Developer
-  2w ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  Vue
-  Sass
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  Eyecam Co.
-  Full Stack Engineer
-  3w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Python
-  <!-- Tools -->
-  Django
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  The Air Filter Company
-  Front-end Dev
-  1mo ago
-  Part Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
+  <header>
+    <form action="#" name="filter-form" method="GET" autocomplete="off">
+      <input type="text" class="search" name="search" placeholder="Search jobs..." autocomplete="off">
+      <button class="clear" type="button" name="clear">Clear</button>
+    </form>
+  </header>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  
+  <!-- Item Start -->
+  <div class="job border">
+    <div class="job_inner">
+      <div class="image"><img src="./images/photosnap.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Photosnap</h4> <span class="new">NEW!</span> <span class="featured">FEATURED</span>
+        <h3>Senior Frontend Developer</h3>
+        <span>1d ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>USA only</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Senior</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+
+
+  <!-- second -->
+  <div class="job border">
+    <div class="job_inner">
+      <div class="image"><img src="./images/manage.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Manage</h4> <span class="new">NEW!</span> <span class="featured">FEATURED</span>
+        <h3>Fullstack Developer</h3>
+        <span>1d ago</span> <span>-</span> <span>Part Time</span> <span>-</span> <span>Remote</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Fullstack</li>
+          <li>Midweight</li>
+          <li>Python</li>
+          <li>React</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- third -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/account.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Account</h4> <span class="new">NEW!</span>
+        <h3>Junior Frontend Developer</h3>
+        <span>2d ago</span> <span>-</span> <span>Part Time</span> <span>-</span> <span>USA only</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Junior</li>
+          <li>React</li>
+          <li>Sass</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- fourth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/myhome.svg" alt=""></div>
+
+      <div class="content">
+        <h4>MyHome</h4>
+        <h3>Junior Frontend Developer</h3>
+        <span>5d ago</span> <span>-</span> <span>Contract</span> <span>-</span> <span>USA only</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Junior</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+  <!-- fifth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/loop-studios.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Loop Studios</h4>
+        <h3>Software Engineer</h3>
+        <span>1w ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>Worldwide</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Fullstack</li>
+          <li>Midweight</li>
+          <li>JavaScript</li>
+          <li>Sass</li>
+          <li>Ruby</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+  <!-- sixth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/faceit.svg" alt=""></div>
+
+      <div class="content">
+        <h4>FaceIt</h4>
+        <h3>Junior Backend Developer</h3>
+        <span>2w ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>UK only</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Backend</li>
+          <li>Junior</li>
+          <li>Ruby</li>
+          <li>RoR</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- seventh -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/shortly.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Shortly</h4>
+        <h3>Junior Developer</h3>
+        <span>2w ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>Worldwide</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Junior</li>
+          <li>HTML</li>
+          <li>Sass</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- eighth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/insure.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Insure</h4>
+        <h3>Junior Frontend Developer</h3>
+        <span>2w ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>USA only</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Junior</li>
+          <li>Vue</li>
+          <li>JavaScript</li>
+          <li>Sass</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- ninth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/eyecam-co.svg" alt=""></div>
+
+      <div class="content">
+        <h4>Eyecam Co.</h4>
+        <h3>Full Stack Engineer</h3>
+        <span>3w ago</span> <span>-</span> <span>Full Time</span> <span>-</span> <span>Worldwide</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Fullstack</li>
+          <li>Midweight</li>
+          <li>JavaScript</li>
+          <li>Django</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- tenth -->
+  <div class="job">
+    <div class="job_inner">
+      <div class="image"><img src="./images/the-air-filter-company.svg" alt=""></div>
+
+      <div class="content">
+        <h4>The Air Filter Company</h4>
+        <h3>Front-end Dev</h3>
+        <span>1mo ago</span> <span>-</span> <span>Part Time</span> <span>-</span> <span>Worldwide</span>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li>Frontend</li>
+          <li>Junior</li>
+          <li>React</li>
+          <li>Sass</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> &copy; | 
+    Coded by <a href="https://twitter.com/nduduzo__">nduduzo</a>.
+  </footer>
+    
+
+  <script src="./main.js" defer></script>
+  <!-- <script src="./data.json"></script> -->
 </body>
 </html>
