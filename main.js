@@ -65,9 +65,10 @@ titles.forEach(title => {
         
         titles.forEach(title => {
             if(title.textContent.toLowerCase().indexOf(text) !== -1){
-                title.parentElement.parentElement.parentElement.style.display = 'block'
+                title.parentElement.parentElement.parentElement.style.display = 'block';
+
             }else{
-                title.parentElement.parentElement.parentElement.style.display = 'none'
+                title.parentElement.parentElement.parentElement.style.display = 'none';
             }
         })
     })
@@ -82,9 +83,10 @@ function filterJobs(e){
     
     titles.forEach(title => {
         if(title.textContent.toLowerCase().indexOf(text) !== -1){
-            title.parentElement.parentElement.parentElement.style.display = 'block'
+            title.parentElement.parentElement.parentElement.style.display = 'block';
+
         }else{
-            title.parentElement.parentElement.parentElement.style.display = 'none'
+            title.parentElement.parentElement.parentElement.style.display = 'none';
         }
     })
         
@@ -98,10 +100,10 @@ function filterTags(e){
     tags.forEach(tag => {
         let tagText = tag.textContent.toLowerCase();
         if(tagText.indexOf(text) !== -1){
-            tag.parentElement.parentElement.parentElement.parentElement.style.display = 'block'
+            tag.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
 
         }else{
-            tag.parentElement.parentElement.parentElement.parentElement.style.display = 'none'
+            tag.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
         }
     })
     
