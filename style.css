@@ -152,6 +152,7 @@ transition: all 0.3s ease;
     background-color: var(--dark-cyan);
     border-radius: 2rem;
     padding: 0.3rem 0.5rem;
+    margin-top: -4px;
     font-size: 0.5rem !important;
     color: #fff !important;
 }
@@ -160,6 +161,7 @@ transition: all 0.3s ease;
     background-color: var(--very-dark-cyan);
     border-radius: 2rem;
     padding: 0.3rem 0.5rem;
+    margin-top: -4px;
     font-size: 0.5rem !important;
     color: #fff !important;
 }
