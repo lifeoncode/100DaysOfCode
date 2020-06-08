@@ -145,22 +145,22 @@ transition: all 0.3s ease;
 
 .job_inner .content span, .job_inner .content h4{
     display: inline;
-    margin-right: 1rem;
+    margin-right: 0.6rem;
 }
 
 .new{
     background-color: var(--dark-cyan);
     border-radius: 2rem;
-    padding: 0.5rem;
-    font-size: 0.7rem !important;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.5rem !important;
     color: #fff !important;
 }
 
 .featured{
     background-color: var(--very-dark-cyan);
     border-radius: 2rem;
-    padding: 0.5rem;
-    font-size: 0.7rem !important;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.5rem !important;
     color: #fff !important;
 }
 
