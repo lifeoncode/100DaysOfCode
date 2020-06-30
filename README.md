@@ -4,7 +4,7 @@
 Thanks for checking out this repo. I'm a code newbie trying to get better at programming everyday so I thought what better way to do that than challenging myself...
 
 
-## The challenge
+## The challenge (100DaysOfCode)
 
 - Learn something new or solidify a certain concept.
 - Take what you learn and put it in practice (if possible).
@@ -14,11 +14,13 @@ Thanks for checking out this repo. I'm a code newbie trying to get better at pro
 
 
 
-- I created a website before joining the '100DaysOfCode' challenge.
-- This site will host my progress which I'll be tweeting daily.
+- I created this website to host all of my '100DaysOfCode challenge' work.
+- I'll be tweeting my progress and updating this site daily.
 
 
-## To follow my journey you can follow me on Twitter
+
+
+## Follow my journey
 
 Twitter: @nduduzo__
 

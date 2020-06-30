@@ -1,9 +1,49 @@
+/* get fonts */
+/* --- 'Pacifico' --- 'Dancing Script' --- 'Open Sans Condensed' --- */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&family=Pacifico&display=swap');
 
-body{
-font-family: 'Pacifico', cursive;
-font-family: 'Dancing Script', cursive;
-font-family: 'Open Sans Condensed', sans-serif;
+
+/* reset browser css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
+
+/* variable colors */
+:root{
+    --light-primary: #ffffff;
+    --light-secondary: #fafafa;
+    --light-grey: #f3f3f3;
+}
+
+
+
+
+/* utility */
+input:focus,
+button:focus,
+textarea:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+/* body */
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #fff;
+}
+
