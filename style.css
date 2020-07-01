@@ -38,12 +38,181 @@ a{
 ul{
     list-style: none;
 }
+img{
+    width: 100%;
+}
 
 
 
 /* body */
 body{
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #fff;
+    position: relative;
 }
 
+/* fixed left */
+.fixed_nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 5%;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    border-right: 1px solid #aaa;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.fixed_nav span{
+    position: absolute;
+    left: -0.5rem;
+    top: 4rem;
+    z-index: -1;
+    font-size: 3rem;
+    transform: rotate(-90deg);
+    font-family: 'Dancing Script';
+    font-weight: 800;
+    color: rgba(41, 41, 212, 0.801);
+}
+
+.fixed_nav h1{
+    font-size: 0.9rem;
+    background-color: rgb(255, 255, 255);
+    color: rgba(41, 41, 212, 0.965);
+    font-weight: 900;
+    transform: rotate(-90deg);
+    margin: 1rem 0 0 0;
+}
+
+.fixed_nav .social{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2rem;
+}
+
+.fixed_nav .social a{
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.fixed_nav .social img{
+    width: 50%;
+    opacity: 0.5;
+}
+
+.fixed_nav .social img:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main content */
+
+/* main tag controls the center content */
+main{
+    padding: 2rem 21.5rem 2rem 4.5rem;
+}
+
+.center{
+    /* background-color: red; */
+    border: 1px solid #aaa;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.center_inner{
+    /* background-color: blue; */
+    border: 1px solid #aaa;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* aside content */
+
+.aside{
+    position: fixed;
+    z-index: 3;
+    background-color: #fff;
+    border-left: 1px solid #aaa;
+    width: 25%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
