@@ -10,6 +10,41 @@
     <title>100 Days of Code | @nduduzo__</title>
 </head>
 <body>
+    <!-- body overlay -->
+    <div class="body_overlay"></div>
+    <!-- settings div -->
+    <div class="settings">
+        <header>
+            <img src="./img/back-arrow.svg" class="escape">
+            <h1>Settings</h1>
+        </header>
+
+        <div class="toggle">
+            <div class="auto">
+                <h3>Auto-switch theme</h3>
+                <p>
+                    Page theme will automatocally change between <b>Dark-mode</b> and <b>Light-mode</b> depending on what time it is<br>
+                    (i.e. night time = darkmode and day time = lightmode).
+                </p>
+            </div>
+            <div class="manual">
+                <h3>Manually toggle theme</h3>
+                <div class="btns">
+                    <img src="./img/sun.png" alt="">
+                    <div class="toggle_btn"><div class="switch"></div></div>
+                    <img src="./img/moon.png" alt="">
+                </div>
+            </div>
+            <div class="fonts">
+                <h3>Manage font sizes</h3>
+                <div class="btns">
+                    <button type="button" class="small">small</button>
+                    <button type="button" class="medium current">medium</button>
+                    <button type="button" class="large">large</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- aside navigation -->
     <div class="fixed_nav">
@@ -20,9 +55,9 @@
         <nav>
             <ul>
                 <li><a href="https://fontendmentor.io/profile/lifeoncode" target="_blank"><img src="./img/target.svg"></a></li>
-                <li><a href="#" ><img src="./img/satelite.svg"></a></li>
+                <li><a href="https://www.100daysofcode.com" target="_blank"><img src="./img/about.png"></a></li>
                 <li><a href="#"><img src="./img/starship.svg"></a></li>
-                <li><a href="#"><img src="./img/settings.svg"></a></li>
+                <li><img src="./img/settings.svg" class="settings_btn"></li>
             </ul>
         </nav>
         <!-- social links -->

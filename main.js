@@ -215,4 +215,28 @@ function init(e){
         document.querySelector('.live').setAttribute('src', 'https://easybank-landing-page-kappa.now.sh');
         document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/easybank-landing-page');
     })
+
+
+
+
+
+
+    // settings
+    const settingsBtn = document.querySelector('.settings_btn');
+    const settings = document.querySelector('.settings');
+    const overlay = document.querySelector('.body_overlay');
+
+    settingsBtn.addEventListener('click', function(e){
+        settings.style.transform = 'scale(1)';
+        setTimeout(() => {
+            overlay.style.transform = 'scale(1)';
+        }, 200);
+    })
+
+    document.querySelector('.escape').addEventListener('click', function(e){
+        settings.style.transform = 'scale(0)';
+        setTimeout(() => {
+            overlay.style.transform = 'scale(0)';
+        }, 200);
+    })
 }
