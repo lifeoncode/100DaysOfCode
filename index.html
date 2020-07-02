@@ -14,22 +14,27 @@
     <!-- aside navigation -->
     <div class="fixed_nav">
         <!-- logo -->
-        <span>100</span>
-        <h1>Days of code</h1>
+        <span>#100</span>
+        <!-- <h1>Days of code</h1> -->
         <!-- navigation -->
         <nav>
-            <ul></ul>
+            <ul>
+                <li><a href="https://fontendmentor.io/profile/lifeoncode" target="_blank"><img src="./img/target.svg"></a></li>
+                <li><a href="#" ><img src="./img/satelite.svg"></a></li>
+                <li><a href="#"><img src="./img/starship.svg"></a></li>
+                <li><a href="#"><img src="./img/settings.svg"></a></li>
+            </ul>
         </nav>
         <!-- social links -->
         <div class="social">
             <a href="https://github.com/lifeoncode">
-                <img src="./img/github.svg" alt="">
+                <img src="./img/github.svg">
             </a>
             <a href="https://twitter.com/nduduzo__">
-                <img src="./img/twitter .svg" alt="">
+                <img src="./img/instagram.svg">
             </a>
             <a href="https://instagram.com/nduduzo__">
-                <img src="./img/instagram.svg" alt="">
+                <img src="./img/twitter.svg">
             </a>
         </div>
     </div>
@@ -41,6 +46,106 @@
         <!-- center content -->
         <div class="center">
             <div class="center_inner">
+                
+                <div class="center_inner_header">
+                    <h2>Challenge Timeline</h2>
+                    <h2>Some Challenges I've Done</h2>
+                </div>
+
+                <div class="center_inner_body">
+                    <!-- timeline -->
+                    <ul class="timeline">
+                        <li id="4">
+                            <h4>Added Javascript: uploaded</h4>
+                            <p>
+                                Added Javascript to the page for basic functionality and some features such as 'toggling dark mode'.
+                            </p>
+
+                            <!-- tweet -->
+                            <div class="tweet">
+                                <a href="https://twitter.com/nduduzo__" target="_blank"><img src="./img/twitter.svg"></a>
+                                <!-- timestamp -->
+                                <span>Day 2: 02 Jul 2020</span>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li id="3">
+                            <h4>Completed the CSS</h4>
+                            <p>
+                                Finished styling the page, this kinda took a bit longer than I expected.
+                            </p>
+
+                            <!-- tweet -->
+                            <div class="tweet">
+                                <a href="https://twitter.com/nduduzo__" target="_blank"><img src="./img/twitter.svg"></a>
+                                <!-- timestamp -->
+                                <span>Day 1: 1 Jul 2020</span>
+                            </div>
+                        </li>
+                        
+
+                        
+                        <li id="2">
+                            <h4>Designed this page</h4>
+                            <p>
+                                Wanted to have a place to keep and share my progress, twitter is great but I thought making a small site would serve as part of the challenge.
+                            </p>
+
+                            <!-- tweet -->
+                            <div class="tweet">
+                                <a href="https://twitter.com/nduduzo__/status/1278026730985459714" target="_blank"><img src="./img/twitter.svg"></a>
+                                <!-- timestamp -->
+                                <span>Day 0: 30 Jun 2020</span>
+                            </div>
+                        </li>
+
+
+
+                        <li id="1">
+                            <h4>Started the challenge</h4>
+                            <p>
+                                Joined #100DaysOfCode challenge to better my understading of web dev and build frontend projects.
+                            </p>
+
+                            <!-- tweet -->
+                            <div class="tweet">
+                                <a href="https://twitter.com/nduduzo__/status/1277669852069625861" target="_blank"><img src="./img/twitter.svg"></a>
+                                <!-- timestamp -->
+                                <span>Started: 29 Jun 2020</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- projects/challenges built -->
+                    <div class="projects">
+                        <div class="project proj_a">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project proj_b">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project proj_c">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project proj_d">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project proj_e">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="project proj_f">
+                            <h3>VIEW</h3>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -50,11 +155,39 @@
     <!-- aside content -->
     <div class="aside">
         <!-- display current time -->
-        <div class="time">
-            <span class="date"></span>
-            <span class="clock"></span>
+        <div class="header">    
+            <!-- date -->
+            <div class="date"></div>
+            <!-- clock -->
+            <div class="clock_container">
+                <div class="clock_hand">
+                    <div></div>
+                </div>
+                <p class="clock"></p>
+                <br>
+                <span class="am_pm"></span>
+            </div>
         </div>
-        <div class="current"></div>
+        <!-- project's overview -->
+        <div class="project_overview hide">
+            <h3>Project Overview</h3>
+            <div class="image"></div>
+            <p></p>
+            <a href="#" class="live">open project</a>
+            <a href="#" class="code">view source code</a>
+            <!-- project languages -->
+            <ul class="languages">
+                <li>
+                    <img src="./img/html5.svg"><div class="html"><div class="bar"><div class="dot"></div></div></div>
+                </li>
+                <li>
+                    <img src="./img/css-3.svg"><div class="css"><div class="bar"><div class="dot"></div></div></div>
+                </li>
+                <li>
+                    <img src="./img/js.svg"><div class="js"><div class="bar"><div class="dot"></div></div></div>
+                </li>
+            </ul>
+        </div>
     </div>
     
     
