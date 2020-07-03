@@ -33,6 +33,12 @@ function init(e){
             }, 500);
         }
 
+
+        // change page themes based on current time
+        function autoChangeMode(e){
+            hrs >= 07 && hrs < 18 ? darkMode() : lightMode();
+        }
+
         // get day -- month -- year
         let [day, month, year] = [time.getDay(), time.getMonth(), time.getFullYear()];
         switch(day){
@@ -117,6 +123,7 @@ function init(e){
 
     // project fields
     const [one, two, three, four, five, six] = [document.querySelector('.proj_a'), document.querySelector('.proj_b'), document.querySelector('.proj_c'), document.querySelector('.proj_d'), document.querySelector('.proj_e'), document.querySelector('.proj_f')]
+    const profile = document.querySelector('.profile');
     // images
     const [imgA, imgB, imgC, imgD, imgE, imgF] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg'];    
     // project descriptions
@@ -138,6 +145,7 @@ function init(e){
 
      
     one.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgA}">`;
@@ -147,10 +155,11 @@ function init(e){
         css.style.width = '70%';
         js.style.width = '40%';
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://pricing-component-sigma.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/pricing-component');
+        document.querySelector('.live').setAttribute('href', 'https://pricing-component-sigma.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/pricing-component');
     })
     two.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgB}">`;
@@ -160,10 +169,11 @@ function init(e){
         css.style.width = '70%';
         js.style.width = '60%';
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://static-job-listings-mu.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/static-job-listings');
+        document.querySelector('.live').setAttribute('href', 'https://static-job-listings-mu.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/static-job-listings');
     })
     three.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgC}">`;
@@ -173,10 +183,11 @@ function init(e){
         css.style.width = '80%';
         js.style.width = '20%';
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://dark-theme-landing-page.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/dark-theme-landing-page');
+        document.querySelector('.live').setAttribute('href', 'https://dark-theme-landing-page.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/dark-theme-landing-page');
     })
     four.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgD}">`;
@@ -186,10 +197,11 @@ function init(e){
         css.style.width = '75%';
         js.style.width = '25%';        
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://manage-landing-page.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/manage-landing-page');
+        document.querySelector('.live').setAttribute('href', 'https://manage-landing-page.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/manage-landing-page');
     })
     five.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgE}">`;
@@ -199,10 +211,11 @@ function init(e){
         css.style.width = '90%';
         js.style.width = '20%';        
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://social-media-dashboard-ten-ruddy.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/social-media-dashboard');
+        document.querySelector('.live').setAttribute('href', 'https://social-media-dashboard-ten-ruddy.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/social-media-dashboard');
     })
     six.addEventListener('click', (e) => {
+        profile.classList.add('hide');
         overview.classList.remove('hide');
         overview.classList.add('fade_in');
         overview.querySelector('.image').innerHTML = `<img src="${imgF}">`;
@@ -212,8 +225,8 @@ function init(e){
         css.style.width = '85%';
         js.style.width = '10%';
         // update the links
-        document.querySelector('.live').setAttribute('src', 'https://easybank-landing-page-kappa.now.sh');
-        document.querySelector('.code').setAttribute('src', 'https://github.com/lifeoncode/easybank-landing-page');
+        document.querySelector('.live').setAttribute('href', 'https://easybank-landing-page-kappa.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/easybank-landing-page');
     })
 
 
@@ -239,4 +252,247 @@ function init(e){
             overlay.style.transform = 'scale(0)';
         }, 200);
     })
+
+
+    // toggle fontsize
+    // grab all text elements
+    const [allH1, allH2, allH3, allH4, paragraphs] = [document.querySelectorAll('h1'), document.querySelectorAll('h2'), document.querySelectorAll('h3'), document.querySelectorAll('h4'), document.querySelectorAll('p')];
+
+    // grab the buttons to toggle sizes
+    const [small, medium, large] = [document.querySelector('.small'), document.querySelector('.medium'), document.querySelector('.large')];
+
+    // add event listeners for each button
+    // for small
+    small.addEventListener('click', function(e){
+        // first add background color to btn
+        this.classList.add('current');
+        medium.classList.remove('current');
+        large.classList.remove('current');
+
+        // then change the font sizes of the page
+        allH1.forEach(h1 => {
+            h1.style.fontSize = '2rem';
+        });
+        allH2.forEach(h2 => {
+            h2.style.fontSize = '1.5rem';
+        });
+        allH3.forEach(h3 => {
+            h3.style.fontSize = '1rem';
+        });
+        allH4.forEach(h4 => {
+            h4.style.fontSize = '0.9rem';
+        });
+        paragraphs.forEach(p => {
+            p.style.fontSize = '0.75rem';
+        });
+    })
+
+    // for medium
+    medium.addEventListener('click', function(e){
+        // first add background color to btn
+        this.classList.add('current');
+        small.classList.remove('current');
+        large.classList.remove('current');
+
+        // then change the font sizes of the page
+        allH1.forEach(h1 => {
+            h1.style.fontSize = '2.5rem';
+        });
+        allH2.forEach(h2 => {
+            h2.style.fontSize = '2rem';
+        });
+        allH3.forEach(h3 => {
+            h3.style.fontSize = '1.6rem';
+        });
+        allH4.forEach(h4 => {
+            h4.style.fontSize = '1.2rem';
+        });
+        paragraphs.forEach(p => {
+            p.style.fontSize = '0.9rem';
+        });
+    })
+
+    // for large
+    large.addEventListener('click', function(e){
+        // first add background color to btn
+        this.classList.add('current');
+        small.classList.remove('current');
+        medium.classList.remove('current');
+
+        // then change the font sizes of the page
+        allH1.forEach(h1 => {
+            h1.style.fontSize = '3rem';
+        });
+        allH2.forEach(h2 => {
+            h2.style.fontSize = '2.5rem';
+        });
+        allH3.forEach(h3 => {
+            h3.style.fontSize = '2rem';
+        });
+        allH4.forEach(h4 => {
+            h4.style.fontSize = '1.5rem';
+        });
+        paragraphs.forEach(p => {
+            p.style.fontSize = '1.1rem';
+        });
+    })
+
+
+    // control auto swicth theme
+    const spans = document.querySelectorAll('.define span');
+    const [on, off] = [document.querySelector('.on'), document.querySelector('.off')]
+
+    on.addEventListener('click', function(e){
+        this.style.backgroundColor = 'var(--primary-blue)';
+        off.style.backgroundColor = 'transparent';
+    })
+    off.addEventListener('click', function(e){
+        this.style.backgroundColor = 'var(--primary-blue)';
+        on.style.backgroundColor = 'transparent';
+    })
+
+
+
+    // toggling themes
+    // toggle btn
+    const toggleBtn = document.querySelector('.switch');
+
+    // add event
+    toggleBtn.addEventListener('click', darkMode);
+
+    // dark mode function
+    function darkMode(e){
+        toggleBtn.style.left = '32px';
+        document.querySelector('.toggle_btn').style.border = '1px solid var(--whitish)';
+        toggleBtn.style.backgroundColor = 'var(--whitish)';
+        settings.style.boxShadow = '5px 10px 30px #000';
+
+        // change text colors
+        allH1.forEach(h1 => {
+            h1.style.color = 'var(--white)';
+        });
+        allH2.forEach(h2 => {
+            h2.style.color = 'var(--white)';
+        });
+        allH3.forEach(h3 => {
+            h3.style.color = 'var(--white)';
+        });
+        allH4.forEach(h4 => {
+            h4.style.color = 'var(--white)';
+        });
+        paragraphs.forEach(p => {
+            p.style.color = 'var(--whitish)';
+        });
+        spans.forEach(span => {
+            span.style.color = 'var(--bg-color)';
+        });
+        // divs and elements
+        const [...allSolid] = [document.querySelector('body'), document.querySelector('.fixed_nav'), document.querySelector('.aside'), document.querySelector('.settings')];
+        const [...allGrad] = [document.querySelector('.aside .header'), document.querySelector('.center'), document.querySelector('.about_me'), document.querySelector('.photo')];
+        const timeline = document.querySelectorAll('.timeline li');
+        const stamps = document.querySelectorAll('.timeline span');
+        const [...buttons] = [small, medium, large];
+        const [...dateAndClock] = [document.querySelector('.date'), document.querySelector('.clock'), document.querySelector('.am_pm')];
+        const clockContainer = document.querySelector('.clock_container');
+        const hand = document.querySelector('.clock_container div');
+        
+        allSolid.forEach(solid => {
+            solid.style.backgroundColor = 'var(--dark-bg)';
+        });
+        allGrad.forEach(grad => {
+            grad.style.backgroundColor = 'var(--darkish-grad)';
+        });
+        timeline.forEach(line => {
+            line.style.backgroundColor = 'var(--dark-bg)';
+            line.style.boxShadow = '1px 2px 5px var(--black-bg)';
+        });
+        stamps.forEach(stamp => {
+            stamp.style.color = 'var(--white)';
+        });
+        buttons.forEach(button => {
+            button.style.boxShadow = '0 0 2px var(--whitish)';
+            button.style.color = 'var(--whitish)';
+        });
+        dateAndClock.forEach(item => {
+            item.style.color = 'var(--whitish)';
+        });
+
+        clockContainer.style.boxShadow = '1px 2px 10px var(--black-bg)';
+        clockContainer.style.backgroundColor = 'var(--darkish-grad)';
+        hand.style.backgroundColor = 'var(--darker-bg)';
+        
+        
+        // remove THIS event listener
+        toggleBtn.removeEventListener('click', darkMode);
+        // add new events
+        toggleBtn.addEventListener('click', lightMode);
+    }
+
+    // light mode function
+    function lightMode(e){
+        toggleBtn.style.left = '0px';
+        document.querySelector('.toggle_btn').style.border = '1px solid var(--headers)';
+        toggleBtn.style.backgroundColor = 'var(--headers)';
+        settings.style.boxShadow = '5px 5px 20px var(--blue-text)';
+
+        // change text colors
+        allH1.forEach(h1 => {
+            h1.style.color = 'var(--headers)';
+        });
+        allH2.forEach(h2 => {
+            h2.style.color = 'var(--headers)';
+        });
+        allH3.forEach(h3 => {
+            h3.style.color = 'var(--headers)';
+        });
+        allH4.forEach(h4 => {
+            h4.style.color = 'var(--headers)';
+        });
+        paragraphs.forEach(p => {
+            p.style.color = 'var(--blue-text)';
+        });
+        spans.forEach(span => {
+            span.style.color = 'var(--blue-text)';
+        });
+
+        // divs and elements
+        const [...allSolid] = [document.querySelector('body'), document.querySelector('.fixed_nav'), document.querySelector('.aside'), document.querySelector('.settings')];
+        const [...allGrad] = [document.querySelector('.aside .header'), document.querySelector('.center'), document.querySelector('.about_me'), document.querySelector('.photo')];
+        const timeline = document.querySelectorAll('.timeline li');
+        const stamps = document.querySelectorAll('.timeline span');
+        const [...buttons] = [small, medium, large];
+        const [...dateAndClock] = [document.querySelector('.date'), document.querySelector('.clock'), document.querySelector('.am_pm')];
+        const clockContainer = document.querySelector('.clock_container');
+        const hand = document.querySelector('.clock_container div');
+
+        allSolid.forEach(solid => {
+            solid.style.backgroundColor = 'var(--bg-color)';
+        });
+        allGrad.forEach(grad => {
+            grad.style.backgroundColor = 'var(--light-grad)';
+        });
+        timeline.forEach(line => {
+            line.style.backgroundColor = 'var(--bg-color)';
+            line.style.boxShadow = '1px 2px 5px var(--blue-text)';
+        });
+        stamps.forEach(stamp => {
+            stamp.style.color = '#000';
+        });
+        buttons.forEach(button => {
+            button.style.boxShadow = '0 0 2px var(--blue-text)';
+            button.style.color = 'var(--blue-text)';
+        });
+        dateAndClock.forEach(item => {
+            item.style.color = 'var(--headers)';
+        });
+        clockContainer.style.boxShadow = '1px 2px 10px var(--shadow-color)';
+        clockContainer.style.backgroundColor = 'var(--light-grad)';
+        hand.style.backgroundColor = 'var(--secondary-blue)';
+        
+
+        // remove THIS event listener
+        toggleBtn.removeEventListener('click', lightMode);
+        // add new events
+        toggleBtn.addEventListener('click', darkMode);
+    }
 }

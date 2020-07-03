@@ -22,10 +22,16 @@
         <div class="toggle">
             <div class="auto">
                 <h3>Auto-switch theme</h3>
-                <p>
-                    Page theme will automatocally change between <b>Dark-mode</b> and <b>Light-mode</b> depending on what time it is<br>
-                    (i.e. night time = darkmode and day time = lightmode).
-                </p>
+                <div class="define">
+                    <div class="btns">
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </div>
+                    <p>
+                        Page theme will automatocally change between <b>Dark-mode</b> and <b>Light-mode</b> depending on what time it is
+                        (i.e. night time = darkmode and day time = lightmode).
+                    </p>
+                </div>
             </div>
             <div class="manual">
                 <h3>Manually toggle theme</h3>
@@ -49,12 +55,11 @@
     <!-- aside navigation -->
     <div class="fixed_nav">
         <!-- logo -->
-        <span>#100</span>
-        <!-- <h1>Days of code</h1> -->
+        <h1>#100</h1>
         <!-- navigation -->
         <nav>
             <ul>
-                <li><a href="https://fontendmentor.io/profile/lifeoncode" target="_blank"><img src="./img/target.svg"></a></li>
+                <li><a href="https://frontendmentor.io/profile/lifeoncode" target="_blank"><img src="./img/target.svg"></a></li>
                 <li><a href="https://www.100daysofcode.com" target="_blank"><img src="./img/about.png"></a></li>
                 <li><a href="#"><img src="./img/starship.svg"></a></li>
                 <li><img src="./img/settings.svg" class="settings_btn"></li>
@@ -91,14 +96,30 @@
                     <!-- timeline -->
                     <ul class="timeline">
                         <li id="4">
-                            <h4>Added Javascript: uploaded</h4>
+                            <h4>Uploaded</h4>
+                            <p>
+                                Added final touches to the look and feel of this page and pushed to Github.
+                            </p>
+
+                            <!-- tweet -->
+                            <div class="tweet">
+                                <a href="https://twitter.com/nduduzo__/status/1278817969091608578" target="_blank"><img src="./img/twitter.svg"></a>
+                                <!-- timestamp -->
+                                <span>Day 3: 03 Jul 2020</span>
+                            </div>
+                        </li>
+
+
+                        
+                        <li id="4">
+                            <h4>Added "nice-to-have" features</h4>
                             <p>
                                 Added Javascript to the page for basic functionality and some features such as 'toggling dark mode'.
                             </p>
 
                             <!-- tweet -->
                             <div class="tweet">
-                                <a href="https://twitter.com/nduduzo__" target="_blank"><img src="./img/twitter.svg"></a>
+                                <a href="https://twitter.com/nduduzo__/status/1278817969091608578" target="_blank"><img src="./img/twitter.svg"></a>
                                 <!-- timestamp -->
                                 <span>Day 2: 02 Jul 2020</span>
                             </div>
@@ -203,13 +224,30 @@
                 <span class="am_pm"></span>
             </div>
         </div>
+
+        <!-- profile -->
+        <div class="profile">
+            <div class="photo">
+                <img src="./img/profile.jpg" alt="">
+            </div>
+            <div class="about_me">
+                <h4>Hey, thanks for being here😊</h4>
+                <p>
+                    So I made this to showcase some of my small frontend projects but mainly to share
+                    my #100DaysOfCode journey with you. I know thats what twitter is for but, I had this
+                    idea when I started the challenge plus I think this serves as part of the challenge, right?🤔.
+                    In here you'll find links to what I've done and get to know what I do during my #100DaysOfCode, wish me luck!
+                </p>
+            </div>
+        </div>
+        
         <!-- project's overview -->
         <div class="project_overview hide">
             <h3>Project Overview</h3>
             <div class="image"></div>
             <p></p>
-            <a href="#" class="live">open project</a>
-            <a href="#" class="code">view source code</a>
+            <a href="" target="_blank" class="live">open project</a>
+            <a href="" target="_blank" class="code">view source code</a>
             <!-- project languages -->
             <ul class="languages">
                 <li>

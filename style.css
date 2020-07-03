@@ -32,10 +32,133 @@
 
     /* dark theme */
 
+    --intro-bg: hsl(217, 28%, 15%);
+    --dark-bg: hsl(218, 28%, 13%);
+    --darker-bg: hsl(216, 53%, 9%);
+    --black-bg: hsl(215, 74%, 5%);
+    --dark-grad: hsl(219, 30%, 18%);
+    --darkish-grad: hsla(218, 46%, 20%, 0.774);
+    --white: hsl(0, 0%, 93%);
+    --whitish: hsl(0, 0%, 85%);
 }
 
 
 /* utility */
+
+/* bg colors */
+body, .fixed_nav, .aside, .settings{
+    background-color: var(--bg-color);
+    /* background-color: var(--dark-bg); */
+}
+
+.center, .aside .header, .about_me, .photo{
+    background-color: var(--light-grad);
+    /* background-color: var(--darkish-grad); */
+}
+
+.timeline li{
+    background-color: var(--bg-color);
+    box-shadow: 1px 2px 5px var(--blue-text);
+    /* background-color: var(--dark-bg);
+    box-shadow: 1px 2px 5px var(--black-bg); */
+}
+
+h1{
+    font-size: 2.5rem;
+    /* small = 2rem */
+    /* large = 3rem */
+}
+
+h2{
+    font-size: 2rem;
+    /* small = 1.5rem */
+    /* large = 2.5rem */
+}
+
+h3{
+    font-size: 1.6rem;
+    /* small = 1rem */
+    /* large = 2rem */
+}
+
+h4{
+    font-size: 1.2rem;
+    /* small = 0.9rem */
+    /* large = 1.5rem */
+}
+
+h1, h2, h3, h4{
+    color: var(--headers);
+    /* color: var(--white); */
+    font-family: 'Dancing Script', 'Pacifico', 'open sans condensed';
+}
+
+p{
+    line-height: 1.4;
+    font-size: 0.9rem;    
+    color: var(--blue-text);
+    /* color: var(--whitish); */
+    /* small = 0.75rem */
+    /* large = 1.1rem */
+}
+
+/* text colors and buttons */
+.date, .clock, .am_pm{
+    color: var(--headers);
+    /* color: var(--whitish); */
+}
+
+.clock_container{
+    background-color: var(--light-grad);
+    /* box-shadow: 1px 2px 10px var(--black-bg); */
+}
+
+.clock_hand div{
+    background-color: var(--secondary-blue);
+    /* background-color: var(--darker-bg); */
+}
+
+.small, .medium, .large{
+    color: var(--blue-text);
+    box-shadow: 0 0 2px var(--blue-text);
+    /* color: var(--whitish); */
+    /* box-shadow: 0 0 2px var(--whitish); */
+}
+
+.toggle_btn{
+    background-color: var(--light-grad);
+    border: 1px solid var(--headers);
+}
+
+.toggle_btn .switch{
+    background-color: var(--headers);
+}
+
+.timeline li span{
+    color: #000;
+    /* color: var(--white); */
+}
+
+.fixed_nav h1{
+    background-color: var(--blue-text) !important;
+    color: var(--bg-color) !important;
+    /* color: var(--dark-bg); */
+    /* background-color: var(--bg-color); */
+}
+
+.define span{
+    background-color: transparent;
+    color: var(--blue-text);
+    /* color: var(--bg-color); */
+    /* background-color: var(--primary-blue); */
+}
+
+
+
+
+
+
+
 input:focus,
 button:focus,
 textarea:focus{
@@ -123,20 +246,20 @@ body{
     width: 5%;
     height: 100vh;
     text-align: center;
-    background-color: var(--bg-color);
     padding: 4rem 0;
     overflow: hidden;
 }
 
-.fixed_nav span{
+.fixed_nav h1{
+    display: inline-block;
     position: absolute;
     left: -0.5rem;
-    top: 4rem;
-    font-size: 2rem;
+    top: 3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem !important;
     transform: rotate(-90deg);
-    font-family: 'Dancing Script', 'Open Sans Condensed';
     font-weight: 800;
-    color: var(--primary-blue);
 }
 
 .fixed_nav nav{
@@ -225,7 +348,6 @@ main{
 }
 
 .center{
-    background-color: var(--light-grad);
     border-radius: 2rem;
 }
 
@@ -241,12 +363,6 @@ main{
     padding: 2rem 0;
 }
 
-.center_inner_header h2{
-    font-family: 'Dancing Script', 'Open Sans Condensed';
-    color: var(--headers);
-    font-size: 2rem;
-}
-
 .center_inner_body{
     padding: 2rem 0;
     display: grid;
@@ -255,7 +371,6 @@ main{
 }
 
 .timeline li{
-    background-color: var(--bg-color);
     box-shadow: 1px 1px 3px var(--shadow-blue);
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
@@ -264,23 +379,16 @@ main{
 }
 
 .timeline li h4{
-    font-size: 1.2rem;
-    font-family: 'Dancing Script', 'Open Sans Condensed';
     font-weight: 600;
-    color: var(--headers);
 }
 
 .timeline li p{
     width: 80%;
     margin: 0.4rem 0 1rem 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--blue-text);
 }
 
 .timeline li span{
     font-size: 0.7rem;   
-    color: #000;
 }
 
 .today{
@@ -332,9 +440,8 @@ main{
 .projects > div h3{
     position: relative;
     z-index: 2;
-    color: var(--bg-color);
-    font-size: 2rem;
-    font-family: 'Dancing Script', 'Open Sans Condensed';
+    color: var(--bg-color) !important;
+    font-size: 2rem !important;
     font-weight: 400;
     opacity: 0;
     transition:all 0.4s ease
@@ -411,7 +518,6 @@ main{
 .aside{
     position: fixed;
     z-index: 3;
-    background-color: var(--bg-color);
     width: 25%;
     right: 0;
     top: 0;
@@ -423,15 +529,13 @@ main{
 .aside .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--light-grad);
     border-radius: 1rem;
     padding: 0.5rem;
 }
 
 .date{
-    font-family: 'Dancing Script', 'Open Sans Condensed';
+    font-family: 'Dancing Script', 'Pacifico', 'open sans condensed';
     font-size: 1.2rem;
-    color: var(--headers);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,8 +543,6 @@ main{
 }
 
 .clock_container{
-    background-color: var(--light-grad);
-    border: 4px solid var(--secondary-blue);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -474,7 +576,6 @@ main{
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--secondary-blue);
 }
 
 
@@ -484,13 +585,41 @@ main{
     font-size: 1rem;
     text-align: center;
     margin-bottom: 0.5rem;
-    color: var(--blue-text);
 }
 
 .am_pm{
     font-size: 0.7rem;
     font-weight: 600;
-    color: var(--blue-text);
+}
+
+
+
+/* profile */
+
+.profile{
+    transition: all 0.2s ease;
+}
+
+.photo{
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.photo img{
+    border-radius: 0.5rem;
+    width: 50%;
+    width: 0 auto;
+}
+
+.about_me{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.profile h4{
+    margin-bottom: 1rem;
 }
 
 
@@ -498,7 +627,6 @@ main{
 /* overview */
 .project_overview{
     border-radius: 0.5rem;
-    /* background-color: var(--secondary-blue); */
     padding: 1rem 0;
     transition: all 0.3s ease;
 }
@@ -508,9 +636,7 @@ main{
 }
 
 .project_overview h3{
-    font-size: 1.2rem;
     font-weight: 400;
-    color: var(--headers);
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -520,9 +646,6 @@ main{
 }
 
 .project_overview p{
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--blue-text);
     margin: 1rem 0;
 }
 
@@ -659,7 +782,7 @@ main{
 
 /* settings */
 .settings{
-    position: absolute;
+    position: fixed;
     top: 10%;
     left: 25%;
     z-index: 4;
@@ -678,12 +801,6 @@ main{
     position: relative;
 }
 
-.settings header h1{
-    font-size: 3rem;
-    color: var(--headers);
-    font-family: 'Dancing Script', 'Open Sans Condensed';
-}
-
 .settings header .escape{
     position: absolute;    
     width: 6%;
@@ -697,15 +814,31 @@ main{
 }
 
 .settings h3{
-    font-size: 1.5rem;
-    color: var(--headers);
-    font-family: 'Dancing Script', 'Open Sans Condensed';
     margin-bottom: 0.5rem;
 }
 
-.settings p{
+.settings .define{
+    display: flex;
+}
+
+.define .btns{
+    margin-right: 2rem;
+}
+
+.define .btns span{
+    padding: 0.5rem;
     font-size: 0.9rem;
-    line-height: 1.4;
+    font-weight: 600;
+    box-shadow: 0 0 1px var(--shadow-color);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.define .btns span:hover{
+    box-shadow: 0 0 4px var(--shadow-color);
+}
+
+.settings p{
     color: var(--blue-text);
 }
 
@@ -726,10 +859,7 @@ main{
     margin: 0 0.5rem;
     width: 60px;
     padding: 2px 3px;
-    background-color: var(--light-grad);
-    border: 1px solid var(--headers);
     border-radius: 2rem;
-    cursor: pointer;
     position: relative;
     transition: all 0.2s ease;
 }
@@ -738,8 +868,8 @@ main{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--headers);
     position: relative;
+    left: 0;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -755,9 +885,7 @@ main{
     font-size: 0.8rem;
     border-radius: 2rem;
     background-color: transparent;
-    color: var(--blue-text);
     cursor: pointer;
-    box-shadow: 0 0 2px var(--blue-text);
     transition: all 0.2s ease;
 }
 
