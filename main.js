@@ -34,13 +34,9 @@ function init(e){
         }
 
 
-        // change page themes based on current time
-        function autoChangeMode(e){
-            hrs >= 07 && hrs < 18 ? darkMode() : lightMode();
-        }
-
         // get day -- month -- year
         let [day, month, year] = [time.getDay(), time.getMonth(), time.getFullYear()];
+        // days
         switch(day){
             case 0: day = 'sun';
             break;
@@ -57,7 +53,7 @@ function init(e){
             case 6: day = 'sat';
             break;
         }
-
+        // months
         switch(month){
             case 0: month = 'January';
             break;
@@ -87,10 +83,16 @@ function init(e){
 
         
         const realDate = `${day} ${month} ${year}`;
-        
-
         document.querySelector('.date').textContent = realDate;
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -105,6 +107,39 @@ function init(e){
     // dynamically add a class
     // to the recent progress update
     document.querySelector('.timeline').firstElementChild.classList.add('today');
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
@@ -141,9 +176,8 @@ function init(e){
 
     // overview field
     const overview = document.querySelector('.project_overview');
-    
 
-     
+    // display project info when EACH project is clicked  
     one.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -233,6 +267,17 @@ function init(e){
 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     // settings
     const settingsBtn = document.querySelector('.settings_btn');
@@ -254,6 +299,50 @@ function init(e){
     })
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // toggle fontsize
     // grab all text elements
     const [allH1, allH2, allH3, allH4, paragraphs] = [document.querySelectorAll('h1'), document.querySelectorAll('h2'), document.querySelectorAll('h3'), document.querySelectorAll('h4'), document.querySelectorAll('p')];
@@ -338,22 +427,129 @@ function init(e){
     })
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     // control auto swicth theme
-    const spans = document.querySelectorAll('.define span');
     const [on, off] = [document.querySelector('.on'), document.querySelector('.off')]
 
+    let status = true;
+
     on.addEventListener('click', function(e){
-        this.style.backgroundColor = 'var(--primary-blue)';
-        off.style.backgroundColor = 'transparent';
-    })
+        this.classList.add('current');
+        off.classList.remove('current');
+        
+        status = true;
+    });
     off.addEventListener('click', function(e){
-        this.style.backgroundColor = 'var(--primary-blue)';
-        on.style.backgroundColor = 'transparent';
-    })
+        this.classList.add('current');
+        on.classList.remove('current');
+
+        status = false;
+    });
+
+    setInterval(() => checkStatus(), 1)
 
 
+    function checkStatus(e){
+        if(status){
+            autoChangeMode();
+            document.querySelector('.toggle_btn').classList.add('no_click');
+            document.querySelector('.switch').classList.add('no_click');
+            
+        }else{
+            document.querySelector('.toggle_btn').classList.remove('no_click');
+            document.querySelector('.switch').classList.remove('no_click');
+        }
+    }
+    // change page themes based on current time
+    function autoChangeMode(e){
+        let hrs = new Date().getHours();
+        hrs >= 07 && hrs < 18 ? lightMode() : darkMode();
+    }
+    
 
-    // toggling themes
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    // manually switch themes
     // toggle btn
     const toggleBtn = document.querySelector('.switch');
 
@@ -366,6 +562,7 @@ function init(e){
         document.querySelector('.toggle_btn').style.border = '1px solid var(--whitish)';
         toggleBtn.style.backgroundColor = 'var(--whitish)';
         settings.style.boxShadow = '5px 10px 30px #000';
+        const spans = document.querySelectorAll('.define span');
 
         // change text colors
         allH1.forEach(h1 => {
@@ -428,12 +625,15 @@ function init(e){
         toggleBtn.addEventListener('click', lightMode);
     }
 
+
+    
     // light mode function
     function lightMode(e){
         toggleBtn.style.left = '0px';
         document.querySelector('.toggle_btn').style.border = '1px solid var(--headers)';
         toggleBtn.style.backgroundColor = 'var(--headers)';
         settings.style.boxShadow = '5px 5px 20px var(--blue-text)';
+        const spans = document.querySelectorAll('.define span');
 
         // change text colors
         allH1.forEach(h1 => {
@@ -496,3 +696,5 @@ function init(e){
         toggleBtn.addEventListener('click', darkMode);
     }
 }
+
+

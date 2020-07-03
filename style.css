@@ -894,7 +894,12 @@ main{
 }
 
 .current{
-    background-color: var(--shadow-blue);
-    color: var(--bg-color);
-    box-shadow: none;
+    background-color: var(--shadow-blue) !important;
+    color: var(--bg-color) !important;
+    box-shadow: none !important;
+}
+
+.no_click{
+    cursor: not-allowed !important;
+    opacity: 0.4 !important;
 }
