@@ -231,7 +231,7 @@ function init(e){
         css.style.width = '75%';
         js.style.width = '25%';        
         // update the links
-        document.querySelector('.live').setAttribute('href', 'https://manage-landing-page.now.sh');
+        document.querySelector('.live').setAttribute('href', 'https://manage-landing-page-taupe.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/manage-landing-page');
     })
     five.addEventListener('click', (e) => {
