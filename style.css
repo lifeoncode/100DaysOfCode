@@ -6,7 +6,7 @@
 
 
 /* reset browser css */
-*{
+*, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -44,6 +44,10 @@
 
 
 /* utility */
+/* hide menu button by default */
+#menu-btn{
+    display: none;
+}
 
 /* bg colors */
 body, .fixed_nav, .aside, .settings{
@@ -209,7 +213,7 @@ img{
 }
 @keyframes colors{
     50%{
-        background-color: var(--secondary-blue);
+        background-color: rgba(65, 68, 255, 0.75);
     }
 }
 
@@ -219,7 +223,7 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 5;
     background-color: var(--blue-text);
     opacity: 0.6;
     transform: scale(0);
@@ -235,6 +239,7 @@ img{
 body{
     font-family: 'Open Sans Condensed', sans-serif;
     position: relative;
+    overflow-x: hidden !important;
 }
 
 /* fixed left */
@@ -348,7 +353,14 @@ main{
 }
 
 .center{
+    position: relative;
+    top: 0;
+    left: 0;
     border-radius: 2rem;
+}
+
+.current_time{
+    display: none;
 }
 
 .center_inner{
@@ -421,15 +433,20 @@ main{
 
 
 /* projects section */
-.projects{
+.projects_inner{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
 }
 
-.projects > div{
+.projects h2{
+    display: none;
+}
+
+.projects_inner > div{
     cursor: pointer;
     border-radius: 0.5rem;
+    padding: 3rem 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -437,7 +454,8 @@ main{
     text-align: center;
     transition:all 0.3s ease
 }
-.projects > div h3{
+
+.projects_inner > div h3{
     position: relative;
     z-index: 2;
     color: var(--bg-color) !important;
@@ -447,8 +465,7 @@ main{
     transition:all 0.4s ease
 }
 
-
-.projects > div:hover .overlay{
+.projects_inner > div:hover .overlay{
     opacity: 0.5;
 }
 
@@ -785,7 +802,7 @@ main{
     position: fixed;
     top: 10%;
     left: 25%;
-    z-index: 4;
+    z-index: 6;
     width: 50%;
     background-color: var(--bg-color);
     padding: 0 4rem 2rem 4rem;

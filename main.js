@@ -14,10 +14,22 @@ function init(e){
         const realTime = `${addZero(hrs)}:${addZero(min)}:${addZero(sec)}`;
 
         // display time to the page
-        document.querySelector('.clock').textContent = realTime;
+        document.querySelectorAll('.clock').forEach(item => {
+            item.textContent = realTime;
+        });
 
         // set AM -- PM
-        hrs >= 12 ? document.querySelector('.am_pm').textContent = ' PM' : document.querySelector('.am_pm').textContent = ' AM';
+        if(hrs >= 12){
+            document.querySelectorAll('.am_pm').forEach(am => {
+                am.textContent = ' PM';
+            });
+
+        }else{
+            document.querySelectorAll('.am_pm').forEach(pm => {
+                pm.textContent = ' AM';
+            });
+        }
+         
 
         // add zeros
         function addZero(n){
@@ -26,10 +38,17 @@ function init(e){
 
             // move the clock hand with css animation
         if(sec == 00){
-            document.querySelector('.clock_hand').classList.add('move');
-            document.querySelector('.clock_container').classList.add('colors');
+            document.querySelectorAll('.clock_hand').forEach(clockHand => {
+                clockHand.classList.add('move');
+            });
+            document.querySelectorAll('.clock_container').forEach(container => {
+                container.classList.add('colors');
+            });
+
             setTimeout(() => {
-                document.querySelector('.clock_container').classList.remove('colors');
+                document.querySelectorAll('.clock_container').forEach(container => {
+                    container.classList.remove('colors');
+                });
             }, 500);
         }
 
@@ -83,7 +102,9 @@ function init(e){
 
         
         const realDate = `${day} ${month} ${year}`;
-        document.querySelector('.date').textContent = realDate;
+        document.querySelectorAll('.date').forEach(calendar => {
+            calendar.textContent = realDate;
+        });
     }
 
 
@@ -267,6 +288,203 @@ function init(e){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // // aside div projects
+    // const [...asideProjects] = [document.querySelector('.aside_a'), document.querySelector('.aside_b'), document.querySelector('.aside_c'), document.querySelector('.aside_d'), document.querySelector('.aside_e'), document.querySelector('.aside_f')];
+
+
+    // asideProjects.forEach(project => {
+    //     project.addEventListener('mouseover', function(e){
+    //         this.querySelector('h3').style.opacity = '1';
+    //     })
+    //     project.addEventListener('mouseout', function(e){
+    //         this.querySelector('h3').style.opacity = '0';
+    //     })
+    // });
+
+    // // project fields
+    // const [i, ii, iii, iv, v, vi] = [document.querySelector('.aside_a'), document.querySelector('.aside_b'), document.querySelector('.aside_c'), document.querySelector('.aside_d'), document.querySelector('.aside_e'), document.querySelector('.aside_f')]
+    // const prfl = document.querySelector('.profile');
+    // // images
+    // const [sA, sB, sC, sD, sE, sF] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg'];    
+    // // project descriptions
+    // const description = {
+    //     asideA: 'Pricing component with toggle button to change pricing. Built with html, css and vanilla javascript.',
+    //     asideB: 'Static job listing with filter, search jobs by clicking tags or simply typing job title, language or skill level.',
+    //     asideC: 'A dark themed landing page with basic form validation.',
+    //     asideD: 'Manage landing page with slides and form validation.',
+    //     asideE: 'Social media dashboard with toggle dark mode.',
+    //     asideF: 'Easybank landing page.'
+    // }
+
+    // // languages
+    // const [doc, sheet, script] = [document.querySelector('.html .bar'), document.querySelector('.css .bar'), document.querySelector('.js .bar')]
+
+    // // overview field
+    // const overV = document.querySelector('.project_overview');
+
+    // // display project info when EACH project is clicked  
+    // i.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sA}">`;
+    //     overV.querySelector('p').textContent = description.asideA;
+    //     // update language level use
+    //     doc.style.width = '70%';
+    //     sheet.style.width = '70%';
+    //     script.style.width = '40%';
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://pricing-component-sigma.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/pricing-component');
+    // })
+    // ii.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sB}">`;
+    //     overV.querySelector('p').textContent = description.asideB;
+    //     // update language level use
+    //     doc.style.width = '90%';
+    //     sheet.style.width = '70%';
+    //     script.style.width = '60%';
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://static-job-listings-mu.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/static-job-listings');
+    // })
+    // iii.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sC}">`;
+    //     overV.querySelector('p').textContent = description.asideC;
+    //     // update language level use
+    //     doc.style.width = '90%';
+    //     sheet.style.width = '80%';
+    //     script.style.width = '20%';
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://dark-theme-landing-page.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/dark-theme-landing-page');
+    // })
+    // iv.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sD}">`;
+    //     overV.querySelector('p').textContent = description.asideD;
+    //     // update language level use
+    //     doc.style.width = '95%';
+    //     sheet.style.width = '75%';
+    //     script.style.width = '25%';        
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://manage-landing-page-taupe.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/manage-landing-page');
+    // })
+    // v.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sE}">`;
+    //     overV.querySelector('p').textContent = description.asideE;
+    //     // update language level use
+    //     doc.style.width = '80%';
+    //     sheet.style.width = '90%';
+    //     script.style.width = '20%';        
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://social-media-dashboard-ten-ruddy.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/social-media-dashboard');
+    // })
+    // vi.addEventListener('click', (e) => {
+    //     prfl.classList.add('hide');
+    //     overV.classList.remove('hide');
+    //     overV.classList.add('fade_in');
+    //     overV.querySelector('.image').innerHTML = `<img src="${sF}">`;
+    //     overV.querySelector('p').textContent = description.asideF;
+    //     // update language level use
+    //     doc.style.width = '95%';
+    //     sheet.style.width = '85%';
+    //     script.style.width = '10%';
+    //     // update the links
+    //     document.querySelector('.live').setAttribute('href', 'https://easybank-landing-page-kappa.now.sh');
+    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/easybank-landing-page');
+    // })
+    
+
+
+    // // show more projects on the aside
+    // const moreBtn = document.querySelector('.show_more');
+
+    // moreBtn.addEventListener('click', showProjects);
+
+    // function showProjects(e){
+    //     // hide profile
+    //     this.classList.add('hide');
+    //     prfl.classList.add('hide');
+
+    //     document.querySelector('.aside_projects').classList.remove('hide');
+    //     // document.querySelector('.aside').style.height = 'auto';
+    //     // document.querySelector('.aside').style.overflow = 'scroll';
+
+
+    //     // remove this event and update the btn with another
+    //     // moreBtn.removeEventListener('click', showFirst);
+    //     // moreBtn.addEventListener('click', showSecond);
+    // }
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
     
     
     
@@ -297,6 +515,15 @@ function init(e){
             overlay.style.transform = 'scale(0)';
         }, 200);
     })
+
+
+
+
+    // if any nav link is clicked --- close the menu
+    const links = document.querySelectorAll('.fixed_nav img');
+    links.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 
 
     
@@ -590,7 +817,7 @@ function init(e){
         const stamps = document.querySelectorAll('.timeline span');
         const [...buttons] = [small, medium, large];
         const [...dateAndClock] = [document.querySelector('.date'), document.querySelector('.clock'), document.querySelector('.am_pm')];
-        const clockContainer = document.querySelector('.clock_container');
+        const clockContainer = document.querySelectorAll('.clock_container');
         const hand = document.querySelector('.clock_container div');
         
         allSolid.forEach(solid => {
@@ -613,8 +840,16 @@ function init(e){
         dateAndClock.forEach(item => {
             item.style.color = 'var(--whitish)';
         });
+        document.querySelectorAll('.date').forEach(item => {
+            item.style.color = 'var(--whitish)';
+        })
+        document.querySelectorAll('.clock').forEach(item => {
+            item.style.color = 'var(--whitish)';
+        })
 
-        clockContainer.style.boxShadow = '1px 2px 10px var(--black-bg)';
+        clockContainer.forEach(item => {
+            style.boxShadow = '1px 2px 10px var(--black-bg)';
+        });
         clockContainer.style.backgroundColor = 'var(--darkish-grad)';
         hand.style.backgroundColor = 'var(--darker-bg)';
         
@@ -695,6 +930,155 @@ function init(e){
         // add new events
         toggleBtn.addEventListener('click', darkMode);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // hamburger menu
+    const [menuBtn, nav, main, content, aside] = [document.querySelector('#menu-btn'), document.querySelector('.fixed_nav'), document.querySelector('main'), document.querySelector('.center'), document.querySelector('.aside')];
+
+    menuBtn.addEventListener('click', openMenu);
+
+    function openMenu(e){
+        // animate the bars
+        menuBtn.firstElementChild.classList.add('animate_top_bar');
+        menuBtn.lastElementChild.classList.add('animate_bottom_bar');
+
+        // after animation ends
+        setTimeout(() => {
+            // fix the style
+            menuBtn.firstElementChild.style.transform = 'rotate(-45deg)';
+            menuBtn.lastElementChild.style.transform = 'rotate(45deg)';
+            // remove animation classes
+            menuBtn.firstElementChild.classList.remove('animate_top_bar');
+            menuBtn.lastElementChild.classList.remove('animate_bottom_bar');
+        }, 500);
+        
+
+        // show the navigation
+        showNav();
+        
+        // add a new event listener to the btn
+        menuBtn.removeEventListener('click', openMenu);
+        menuBtn.addEventListener('click', closeMenu);
+    }
+
+    // close menu
+    function closeMenu(e){
+        // animate the bars
+        menuBtn.firstElementChild.classList.add('reverse_top_bar');
+        menuBtn.lastElementChild.classList.add('reverse_bottom_bar');
+
+        // after animation ends
+        setTimeout(() => {
+            // fix the style
+            menuBtn.firstElementChild.style.transform = 'rotate(0)';
+            menuBtn.lastElementChild.style.transform = 'rotate(0)';
+            // remove animation classes
+            menuBtn.firstElementChild.classList.remove('reverse_top_bar');
+            menuBtn.lastElementChild.classList.remove('reverse_bottom_bar');
+        }, 500);
+
+
+        // hide the navigation
+        hideNav();
+        
+        
+
+        // return the previous event listener to the btn
+        menuBtn.removeEventListener('click',closeMenu);
+        menuBtn.addEventListener('click', openMenu);
+    }
+    
+
+
+    // hide the menu nav to show project overview when any of the projects is clicked
+    const [...allProjects] = [one, two, three, four, five, six];
+    allProjects.forEach(proj => {
+        proj.addEventListener('click', closeMenu);
+    });
+
+
+    // show nav function
+    function showNav(e){
+        nav.style.opacity = '1';
+        aside.style.opacity = '0';
+        // main.style.padding = '2rem 2rem 2rem 10rem';
+        content.style.top = '50px';
+        content.style.left = '20%';
+        content.style.borderTopLeftRadius = '2rem';
+        content.style.borderBottomLeftRadius = '2rem';
+    }
+
+    // hide nav function
+    function hideNav(e){
+        nav.style.opacity = '0';
+        aside.style.opacity = '1';
+        // main.style.padding = '0 20rem 0 0';
+        content.style.top = '0';
+        content.style.left = '0';
+        content.style.borderTopLeftRadius = '0';
+        content.style.borderBottomLeftRadius = '0';
+    }
+    
+    
+    
+    
+    
+    
+    
 }
+
 
 

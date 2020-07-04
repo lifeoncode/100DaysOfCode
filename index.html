@@ -7,9 +7,17 @@
     <meta name="robots" content="index, follow">
     <meta name="google" content="translate">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css">
     <title>100 Days of Code | @nduduzo__</title>
 </head>
 <body>
+    <!-- menu button hidden by default -->
+    <div id="menu-btn">
+        <div class="top_bar"></div>
+        <div class="bottom_bar"></div>
+    </div>
+    
+    
     <!-- body overlay -->
     <div class="body_overlay"></div>
     <!-- settings div -->
@@ -88,8 +96,23 @@
             <div class="center_inner">
                 
                 <div class="center_inner_header">
-                    <h2>Challenge Timeline</h2>
-                    <h2>Some Challenges I've Done</h2>
+                    <div class="current_time">
+                        <!-- date -->
+                        <div class="date"></div>
+                        <!-- clock -->
+                        <div class="clock_container">
+                            <div class="clock_hand">
+                                <div></div>
+                            </div>
+                            <p class="clock"></p>
+                            <br>
+                            <span class="am_pm"></span>
+                        </div>
+                    </div>
+                    
+                    
+                    <h2>Challenge Timeline </h2>
+                    <h2>& Some Challenges I've Done</h2>
                 </div>
 
                 <div class="center_inner_body">
@@ -175,29 +198,33 @@
                     </ul>
                     <!-- projects/challenges built -->
                     <div class="projects">
-                        <div class="project proj_a">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="project proj_b">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="project proj_c">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="project proj_d">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="project proj_e">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="project proj_f">
-                            <h3>VIEW</h3>
-                            <div class="overlay"></div>
+                        <h2>Some Challenges I've Done</h2>
+                        
+                        <div class="projects_inner">
+                            <div class="project proj_a">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="project proj_b">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="project proj_c">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="project proj_d">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="project proj_e">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="project proj_f">
+                                <h3>VIEW</h3>
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -261,6 +288,7 @@
                 </li>
             </ul>
         </div>
+        
     </div>
     
     
