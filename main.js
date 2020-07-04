@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', init);
 
+
 function init(e){
 
     setInterval(() => {
@@ -213,6 +214,7 @@ function init(e){
         document.querySelector('.live').setAttribute('href', 'https://pricing-component-sigma.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/pricing-component');
     })
+    
     two.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -227,6 +229,7 @@ function init(e){
         document.querySelector('.live').setAttribute('href', 'https://static-job-listings-mu.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/static-job-listings');
     })
+    
     three.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -241,6 +244,7 @@ function init(e){
         document.querySelector('.live').setAttribute('href', 'https://dark-theme-landing-page.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/dark-theme-landing-page');
     })
+
     four.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -255,6 +259,7 @@ function init(e){
         document.querySelector('.live').setAttribute('href', 'https://manage-landing-page-taupe.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/manage-landing-page');
     })
+
     five.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -269,6 +274,7 @@ function init(e){
         document.querySelector('.live').setAttribute('href', 'https://social-media-dashboard-ten-ruddy.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/social-media-dashboard');
     })
+
     six.addEventListener('click', (e) => {
         profile.classList.add('hide');
         overview.classList.remove('hide');
@@ -287,10 +293,21 @@ function init(e){
 
 
 
+    document.querySelectorAll('.project').forEach(item => {
+        item.addEventListener('click', function(e){
+            document.querySelector('.aside').style.transform = 'scale(1)';
+        })
+    })
+
+
+    document.querySelector('.aside .escape').addEventListener('click', function(e){
+        document.querySelector('.aside').style.transform = 'scale(0)';
+    })
 
 
 
 
+    
 
 
 
@@ -359,6 +376,7 @@ function init(e){
     //     document.querySelector('.live').setAttribute('href', 'https://pricing-component-sigma.now.sh');
     //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/pricing-component');
     // })
+
     // ii.addEventListener('click', (e) => {
     //     prfl.classList.add('hide');
     //     overV.classList.remove('hide');
@@ -842,15 +860,17 @@ function init(e){
         });
         document.querySelectorAll('.date').forEach(item => {
             item.style.color = 'var(--whitish)';
-        })
+        });
         document.querySelectorAll('.clock').forEach(item => {
             item.style.color = 'var(--whitish)';
-        })
+        });
 
         clockContainer.forEach(item => {
-            style.boxShadow = '1px 2px 10px var(--black-bg)';
+            item.style.boxShadow = '1px 2px 10px var(--black-bg)';
         });
-        clockContainer.style.backgroundColor = 'var(--darkish-grad)';
+        clockContainer.forEach(item => {
+            item.style.backgroundColor = 'var(--darkish-grad)';
+        });
         hand.style.backgroundColor = 'var(--darker-bg)';
         
         
@@ -1056,7 +1076,7 @@ function init(e){
         aside.style.opacity = '0';
         // main.style.padding = '2rem 2rem 2rem 10rem';
         content.style.top = '50px';
-        content.style.left = '20%';
+        content.style.left = '25%';
         content.style.borderTopLeftRadius = '2rem';
         content.style.borderBottomLeftRadius = '2rem';
     }

@@ -162,6 +162,23 @@ p{
 
 
 
+footer{
+    padding: 2rem;
+    text-align: center;
+}
+footer p{
+    font-size: 0.9rem;
+    color: var(--shadow-blue);
+}
+footer a{
+    color: var(--headers);
+    transition: color 0.3s ease;
+    font-weight: 700;
+}
+footer a:hover{
+    color: orangered;
+}
+
 
 input:focus,
 button:focus,
@@ -550,6 +567,10 @@ main{
     padding: 0.5rem;
 }
 
+.aside .escape{
+    display: none;
+}
+
 .date{
     font-family: 'Dancing Script', 'Pacifico', 'open sans condensed';
     font-size: 1.2rem;
@@ -645,6 +666,7 @@ main{
 .project_overview{
     border-radius: 0.5rem;
     padding: 1rem 0;
+    position: relative;
     transition: all 0.3s ease;
 }
 
