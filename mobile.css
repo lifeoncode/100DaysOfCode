@@ -596,6 +596,11 @@
         width: 86%;
     }
     
+
+    /* menu */
+    #menu-btn{
+        left: 1rem;
+    }
     
     
     
@@ -729,6 +734,24 @@
 
 
 @media screen and (max-width: 450px){
+    
+
+    /* menu */
+    #menu-btn{
+        width: 40px;
+    }
+
+    #menu-btn .top_bar{
+        transform-origin: 70%;
+    }
+
+    #menu-btn .bottom_bar{
+        transform-origin: 70%;
+    }
+
+    .fixed_nav{
+        height: auto;
+    }
     
     
     
