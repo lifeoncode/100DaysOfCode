@@ -167,6 +167,8 @@ footer{
     text-align: center;
 }
 footer p{
+    position: relative;
+    z-index: 6;
     font-size: 0.9rem;
     color: var(--shadow-blue);
 }
