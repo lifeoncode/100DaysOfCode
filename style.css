@@ -256,7 +256,9 @@ img{
 body{
     font-family: 'Open Sans Condensed', sans-serif;
     position: relative;
+    max-width: 100%;
     overflow-x: hidden !important;
+    overflow-y: scroll !important;
 }
 
 /* fixed left */
@@ -366,6 +368,8 @@ body{
 
 /* main tag controls the center content */
 main{
+    max-width: 100%;
+    overflow-x: hidden !important;
     padding: 1rem 21.5rem 1rem 4.5rem;
 }
 
