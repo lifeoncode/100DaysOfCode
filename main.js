@@ -296,193 +296,14 @@ function init(e){
     document.querySelectorAll('.project').forEach(item => {
         item.addEventListener('click', function(e){
             document.querySelector('.aside').style.transform = 'scale(1)';
-        })
-    })
+        });
+    });
 
 
     document.querySelector('.aside .escape').addEventListener('click', function(e){
         document.querySelector('.aside').style.transform = 'scale(0)';
-    })
+    });
 
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // // aside div projects
-    // const [...asideProjects] = [document.querySelector('.aside_a'), document.querySelector('.aside_b'), document.querySelector('.aside_c'), document.querySelector('.aside_d'), document.querySelector('.aside_e'), document.querySelector('.aside_f')];
-
-
-    // asideProjects.forEach(project => {
-    //     project.addEventListener('mouseover', function(e){
-    //         this.querySelector('h3').style.opacity = '1';
-    //     })
-    //     project.addEventListener('mouseout', function(e){
-    //         this.querySelector('h3').style.opacity = '0';
-    //     })
-    // });
-
-    // // project fields
-    // const [i, ii, iii, iv, v, vi] = [document.querySelector('.aside_a'), document.querySelector('.aside_b'), document.querySelector('.aside_c'), document.querySelector('.aside_d'), document.querySelector('.aside_e'), document.querySelector('.aside_f')]
-    // const prfl = document.querySelector('.profile');
-    // // images
-    // const [sA, sB, sC, sD, sE, sF] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg'];    
-    // // project descriptions
-    // const description = {
-    //     asideA: 'Pricing component with toggle button to change pricing. Built with html, css and vanilla javascript.',
-    //     asideB: 'Static job listing with filter, search jobs by clicking tags or simply typing job title, language or skill level.',
-    //     asideC: 'A dark themed landing page with basic form validation.',
-    //     asideD: 'Manage landing page with slides and form validation.',
-    //     asideE: 'Social media dashboard with toggle dark mode.',
-    //     asideF: 'Easybank landing page.'
-    // }
-
-    // // languages
-    // const [doc, sheet, script] = [document.querySelector('.html .bar'), document.querySelector('.css .bar'), document.querySelector('.js .bar')]
-
-    // // overview field
-    // const overV = document.querySelector('.project_overview');
-
-    // // display project info when EACH project is clicked  
-    // i.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sA}">`;
-    //     overV.querySelector('p').textContent = description.asideA;
-    //     // update language level use
-    //     doc.style.width = '70%';
-    //     sheet.style.width = '70%';
-    //     script.style.width = '40%';
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://pricing-component-sigma.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/pricing-component');
-    // })
-
-    // ii.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sB}">`;
-    //     overV.querySelector('p').textContent = description.asideB;
-    //     // update language level use
-    //     doc.style.width = '90%';
-    //     sheet.style.width = '70%';
-    //     script.style.width = '60%';
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://static-job-listings-mu.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/static-job-listings');
-    // })
-    // iii.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sC}">`;
-    //     overV.querySelector('p').textContent = description.asideC;
-    //     // update language level use
-    //     doc.style.width = '90%';
-    //     sheet.style.width = '80%';
-    //     script.style.width = '20%';
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://dark-theme-landing-page.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/dark-theme-landing-page');
-    // })
-    // iv.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sD}">`;
-    //     overV.querySelector('p').textContent = description.asideD;
-    //     // update language level use
-    //     doc.style.width = '95%';
-    //     sheet.style.width = '75%';
-    //     script.style.width = '25%';        
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://manage-landing-page-taupe.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/manage-landing-page');
-    // })
-    // v.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sE}">`;
-    //     overV.querySelector('p').textContent = description.asideE;
-    //     // update language level use
-    //     doc.style.width = '80%';
-    //     sheet.style.width = '90%';
-    //     script.style.width = '20%';        
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://social-media-dashboard-ten-ruddy.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/social-media-dashboard');
-    // })
-    // vi.addEventListener('click', (e) => {
-    //     prfl.classList.add('hide');
-    //     overV.classList.remove('hide');
-    //     overV.classList.add('fade_in');
-    //     overV.querySelector('.image').innerHTML = `<img src="${sF}">`;
-    //     overV.querySelector('p').textContent = description.asideF;
-    //     // update language level use
-    //     doc.style.width = '95%';
-    //     sheet.style.width = '85%';
-    //     script.style.width = '10%';
-    //     // update the links
-    //     document.querySelector('.live').setAttribute('href', 'https://easybank-landing-page-kappa.now.sh');
-    //     document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/easybank-landing-page');
-    // })
-    
-
-
-    // // show more projects on the aside
-    // const moreBtn = document.querySelector('.show_more');
-
-    // moreBtn.addEventListener('click', showProjects);
-
-    // function showProjects(e){
-    //     // hide profile
-    //     this.classList.add('hide');
-    //     prfl.classList.add('hide');
-
-    //     document.querySelector('.aside_projects').classList.remove('hide');
-    //     // document.querySelector('.aside').style.height = 'auto';
-    //     // document.querySelector('.aside').style.overflow = 'scroll';
-
-
-    //     // remove this event and update the btn with another
-    //     // moreBtn.removeEventListener('click', showFirst);
-    //     // moreBtn.addEventListener('click', showSecond);
-    // }
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -804,8 +625,8 @@ function init(e){
     // dark mode function
     function darkMode(e){
         toggleBtn.style.left = '32px';
-        document.querySelector('.toggle_btn').style.border = '1px solid var(--whitish)';
-        toggleBtn.style.backgroundColor = 'var(--whitish)';
+        document.querySelector('.toggle_btn').style.border = '1px solid var(--headers)';
+        toggleBtn.style.backgroundColor = 'var(--dark-grad)';
         settings.style.boxShadow = '5px 10px 30px #000';
         const spans = document.querySelectorAll('.define span');
 
@@ -867,9 +688,6 @@ function init(e){
 
         clockContainer.forEach(item => {
             item.style.boxShadow = '1px 2px 10px var(--black-bg)';
-        });
-        clockContainer.forEach(item => {
-            item.style.backgroundColor = 'var(--darkish-grad)';
         });
         hand.style.backgroundColor = 'var(--darker-bg)';
         
@@ -941,7 +759,6 @@ function init(e){
             item.style.color = 'var(--headers)';
         });
         clockContainer.style.boxShadow = '1px 2px 10px var(--shadow-color)';
-        clockContainer.style.backgroundColor = 'var(--light-grad)';
         hand.style.backgroundColor = 'var(--secondary-blue)';
         
 
@@ -1083,7 +900,7 @@ function init(e){
 
     // hide nav function
     function hideNav(e){
-        nav.style.opacity = '0';
+        // nav.style.opacity = '0';
         aside.style.opacity = '1';
         // main.style.padding = '0 20rem 0 0';
         content.style.top = '0';
