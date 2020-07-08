@@ -106,6 +106,10 @@ p{
     /* large = 1.1rem */
 }
 
+p a{
+    color: var(--primary-blue);
+}
+
 /* text colors and buttons */
 .date, .clock, .am_pm{
     color: var(--headers);
