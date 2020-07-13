@@ -179,10 +179,10 @@ function init(e){
     })
 
     // project fields
-    const [one, two, three, four, five, six] = [document.querySelector('.proj_a'), document.querySelector('.proj_b'), document.querySelector('.proj_c'), document.querySelector('.proj_d'), document.querySelector('.proj_e'), document.querySelector('.proj_f')]
+    const [one, two, three, four, five, six, seven, eight] = [document.querySelector('.proj_a'), document.querySelector('.proj_b'), document.querySelector('.proj_c'), document.querySelector('.proj_d'), document.querySelector('.proj_e'), document.querySelector('.proj_f'), document.querySelector('.proj_g'), document.querySelector('.proj_h')]
     const profile = document.querySelector('.profile');
     // images
-    const [imgA, imgB, imgC, imgD, imgE, imgF] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg'];    
+    const [imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg', './img/four-card.jpg', './img/testimonials.jpg'];    
     // project descriptions
     const describe = {
         projectA: 'Pricing component with toggle button to change pricing. Built with html, css and vanilla javascript.',
@@ -190,7 +190,9 @@ function init(e){
         projectC: 'A dark themed landing page with basic form validation.',
         projectD: 'Manage landing page with slides and form validation.',
         projectE: 'Social media dashboard with toggle dark mode.',
-        projectF: 'Easybank landing page.'
+        projectF: 'Easybank landing page.',
+        projectG: 'Four-card fetured layout intro component.',
+        projectH: 'Coding bootcamp testimonial slides component.'
     }
 
     // languages
@@ -288,6 +290,36 @@ function init(e){
         // update the links
         document.querySelector('.live').setAttribute('href', 'https://easybank-landing-page-kappa.now.sh');
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/easybank-landing-page');
+    })
+
+    seven.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgG}">`;
+        overview.querySelector('p').textContent = describe.projectG;
+        // update language level use
+        html.style.width = '70%';
+        css.style.width = '85%';
+        js.style.width = '0%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://four-card-feature-ashy.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/four-card-feature');
+    })
+
+    eight.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgH}">`;
+        overview.querySelector('p').textContent = describe.projectH;
+        // update language level use
+        html.style.width = '80%';
+        css.style.width = '90%';
+        js.style.width = '30%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://testimonial-slides.now.sh');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/testimonial-slides');
     })
 
 
