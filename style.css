@@ -12,6 +12,15 @@
     padding: 0;
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, hsla(219, 34%, 23%, 0.328), var(--darkish-grad), var(--shadow-blue));
+    border-radius: 2rem;
+}
 
 
 /* colors */

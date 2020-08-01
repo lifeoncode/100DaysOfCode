@@ -89,15 +89,15 @@ function init(e){
             break;
             case 6: month = 'July';
             break;
-            case 6: month = 'August';
+            case 7: month = 'August';
             break;
-            case 6: month = 'September';
+            case 8: month = 'September';
             break;
-            case 6: month = 'October';
+            case 9: month = 'October';
             break;
-            case 6: month = 'November';
+            case 10: month = 'November';
             break;
-            case 6: month = 'December';
+            case 11: month = 'December';
             break;
         }
 
