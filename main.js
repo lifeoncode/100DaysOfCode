@@ -461,7 +461,7 @@ function init(e){
             h1.style.fontSize = '2rem';
         });
         allH2.forEach(h2 => {
-            h2.style.fontSize = '1.5rem';
+            h2.style.fontSize = '1.3rem';
         });
         allH3.forEach(h3 => {
             h3.style.fontSize = '1rem';
@@ -470,7 +470,7 @@ function init(e){
             h4.style.fontSize = '0.9rem';
         });
         paragraphs.forEach(p => {
-            p.style.fontSize = '0.75rem';
+            p.style.fontSize = '0.72rem';
         });
     })
 
@@ -520,7 +520,7 @@ function init(e){
             h4.style.fontSize = '1.5rem';
         });
         paragraphs.forEach(p => {
-            p.style.fontSize = '1.1rem';
+            p.style.fontSize = '1rem';
         });
     })
 
