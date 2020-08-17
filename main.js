@@ -1,7 +1,13 @@
 window.addEventListener('DOMContentLoaded', init);
 
 
+
 function init(e){
+
+    // reload whole window if logo clicked
+    document.querySelector('.fixed_nav h1').addEventListener('click', (e) => {
+        window.location.reload();
+    })
 
     setInterval(() => {
         showTime();
