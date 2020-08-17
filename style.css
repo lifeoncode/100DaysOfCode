@@ -157,6 +157,7 @@ p a{
 .fixed_nav h1{
     background-color: var(--blue-text) !important;
     color: var(--bg-color) !important;
+    cursor: pointer;
     /* color: var(--dark-bg); */
     /* background-color: var(--bg-color); */
 }
