@@ -21,7 +21,7 @@
 
 ::-webkit-scrollbar-thumb{
     background: var(--secondary-blue);
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 
@@ -39,7 +39,7 @@
     --shadow-blue: hsl(210, 78%, 56%);
     --headers: hsl(210, 91%, 27%);
     --blue-text: hsl(209, 65%, 15%);
-    --light-grad: rgb(232, 232, 255);
+    --light-grad: rgb(228, 228, 241);
 
     /* dark theme */
 
@@ -47,8 +47,8 @@
     --dark-bg: hsl(218, 28%, 13%);
     --darker-bg: hsl(216, 53%, 9%);
     --black-bg: hsl(215, 74%, 5%);
-    --dark-grad: hsl(219, 30%, 18%);
-    --darkish-grad: hsl(218, 34%, 23%);
+    --dark-grad: hsl(219, 46%, 14%);
+    --darkish-grad: hsl(218, 29%, 17%);
     --white: hsl(0, 0%, 93%);
     --whitish: hsl(0, 0%, 85%);
 }
@@ -127,7 +127,7 @@ img{
 
 /* text colors and buttons */
 .date, .clock, .am_pm{
-    color: var(--headers);
+    color: var(--primary-blue) !important;
     /* color: var(--whitish); */
 }
 
@@ -389,7 +389,7 @@ main{
     position: relative;
     top: 0;
     left: 0;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
 }
 
 .current_time{
@@ -419,7 +419,7 @@ main{
     box-shadow: 1px 1px 3px var(--shadow-blue);
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     position: relative;
 }
 
@@ -584,7 +584,7 @@ main{
 .aside .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
 }
 
@@ -662,7 +662,7 @@ main{
 .photo{
     padding: 1rem;
     margin: 2rem 0;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     text-align: center;
 }
 
@@ -674,7 +674,7 @@ main{
 
 .about_me{
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .profile h4{
@@ -761,7 +761,7 @@ main{
 .languages .css,
 .languages .js{
     background-color: var(--light-grad);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 1px;
     width: 100%;
 }
@@ -770,7 +770,7 @@ main{
 .html .bar{
     background-color: rgb(251, 93, 35);
     padding: 2px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 95%;
     position: relative;
 }
@@ -778,7 +778,7 @@ main{
 .css .bar{
     background-color: var(--secondary-blue);
     padding: 2px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 80%;
     position: relative;
 }
@@ -849,7 +849,7 @@ main{
     width: 50%;
     background-color: var(--bg-color);
     padding: 0 4rem 2rem 4rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     box-shadow: 5px 5px 20px var(--blue-text);
     transform: scale(0);
     transition: all 0.3s ease;
@@ -922,7 +922,7 @@ main{
     margin: 0 0.5rem;
     width: 60px;
     padding: 2px 3px;
-    border-radius: 2rem;
+    border-radius: 1rem;
     position: relative;
     transition: all 0.2s ease;
 }
@@ -946,7 +946,7 @@ main{
     padding: 0.5rem 2rem;
     border: 0;
     font-size: 0.8rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.2s ease;
