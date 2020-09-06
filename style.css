@@ -15,12 +15,12 @@
 }
 
 ::-webkit-scrollbar{
-    width: 8px;
-    background: transparent;
+    width: 4px;
+    background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, hsla(219, 34%, 23%, 0.328), var(--darkish-grad), var(--shadow-blue));
+    background: var(--secondary-blue);
     border-radius: 2rem;
 }
 
@@ -121,6 +121,10 @@ p a{
     color: var(--primary-blue);
 }
 
+img{
+    width: 100%;
+}
+
 /* text colors and buttons */
 .date, .clock, .am_pm{
     color: var(--headers);
@@ -206,10 +210,6 @@ a{
 
 ul{
     list-style: none;
-}
-
-img{
-    width: 100%;
 }
 
 .hide{
@@ -300,6 +300,18 @@ body{
     font-weight: 800;
 }
 
+.fixed_nav i{
+    display: block;
+    font-size: 26px;
+    color: var(--headers);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+.fixed_nav i:hover{
+    opacity: 1;
+}
+
 .fixed_nav nav{
     padding: 8rem 0 0 0;
 }
@@ -308,33 +320,19 @@ body{
     margin-bottom: 1.5rem;
 }
 
-.fixed_nav nav img{
-    width: 50%;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-    cursor: pointer;
-}
-.fixed_nav nav img:hover{
-    opacity: 1;
-}
-
 .fixed_nav .social{
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-bottom: 2rem;
+    padding: 0 1.5rem 2rem 1.5rem;
+    display: grid;
+    gap: 20px;
 }
 
 .fixed_nav .social a{
     display: inline-block;
-    margin: 0.5rem 0;
 }
 
-.fixed_nav .social img{
-    width: 50%;
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
-}
 
 .fixed_nav .social img:hover{
     opacity: 1;
@@ -450,16 +448,15 @@ main{
 }
 
 
-.timeline li a{
-    width: 8%;
-}
-
-.timeline li img{
+.timeline li i{
+    display: inline-block;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.8;
+    font-size: 26px;
+    color: var(--headers);
     transition: all 0.2s ease;
 }
-.timeline li img:hover{
+.timeline li i:hover{
     opacity: 1;
     transform: scale(1.2);
 }
@@ -864,12 +861,14 @@ main{
     position: relative;
 }
 
-.settings header .escape{
+.settings header i{
     position: absolute;    
     width: 6%;
     left: 0;
     top: 2rem;
     cursor: pointer;
+    color: var(--secondary-blue);
+    font-size: 26px;
     transition: all 0.2s ease;
 }
 .settings header .escape:hover{
@@ -914,8 +913,9 @@ main{
     align-items: center;
 }
 
-.btns img{
-    width: 8%;
+.btns i{
+    color: var(--primary-blue);
+    font-size: 20px;
 }
 
 .toggle_btn{
