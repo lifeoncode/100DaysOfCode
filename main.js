@@ -185,10 +185,10 @@ function init(e){
     })
 
     // project fields
-    const [one, two, three, four, five, six, seven, eight] = [document.querySelector('.proj_a'), document.querySelector('.proj_b'), document.querySelector('.proj_c'), document.querySelector('.proj_d'), document.querySelector('.proj_e'), document.querySelector('.proj_f'), document.querySelector('.proj_g'), document.querySelector('.proj_h')]
+    const [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen, fourteen] = [document.querySelector('.proj_a'), document.querySelector('.proj_b'), document.querySelector('.proj_c'), document.querySelector('.proj_d'), document.querySelector('.proj_e'), document.querySelector('.proj_f'), document.querySelector('.proj_g'), document.querySelector('.proj_h'), document.querySelector('.proj_i'), document.querySelector('.proj_j'), document.querySelector('.proj_k'), document.querySelector('.proj_l'), document.querySelector('.proj_m'), document.querySelector('.proj_n')];
     const profile = document.querySelector('.profile');
     // images
-    const [imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg', './img/four-card.jpg', './img/testimonials.jpg'];    
+    const [imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI, imgJ, imgK, imgL, imgM, imgN] = ['./img/pricing.jpg', './img/static.jpg', './img/dark.jpg', './img/manage.jpg', './img/dashboard.jpg', './img/easybank.jpg', './img/four-card.jpg', './img/testimonials.jpg', './img/base-apparel.jpg', './img/bookmark-landing.jpg', './img/insure-landing.jpg', './img/ping.jpg', './img/project-track.jpg', './img/two-column.jpg'];    
     // project descriptions
     const describe = {
         projectA: 'Pricing component with toggle button to change pricing. Built with html, css and vanilla javascript.',
@@ -198,7 +198,13 @@ function init(e){
         projectE: 'Social media dashboard with toggle dark mode.',
         projectF: 'Easybank landing page.',
         projectG: 'Four-card fetured layout intro component.',
-        projectH: 'Coding bootcamp testimonial slides component.'
+        projectH: 'Coding bootcamp testimonial slides component.',
+        projectI: 'Apparel store coming coon component.',
+        projectJ: 'Typical landing page a "Bookmark".',
+        projectK: 'Another typical landing page for the company "Insure".',
+        projectL: 'Coming soon email signup component.',
+        projectM: 'Project track component.',
+        projectN: 'A basic two column layout page.'
     }
 
     // languages
@@ -328,7 +334,95 @@ function init(e){
         document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/testimonial-slides');
     })
 
+    nine.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgI}">`;
+        overview.querySelector('p').textContent = describe.projectI;
+        // update language level use
+        html.style.width = '70%';
+        css.style.width = '70%';
+        js.style.width = '5%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://base-apparel-coming-soon-puce.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/base-apparel-coming-soon');
+    })
 
+    ten.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgJ}">`;
+        overview.querySelector('p').textContent = describe.projectJ;
+        // update language level use
+        html.style.width = '90%';
+        css.style.width = '80%';
+        js.style.width = '10%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://bookmark-landing-page-two.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/bookmark-landing-page');
+    })
+
+    eleven.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgK}">`;
+        overview.querySelector('p').textContent = describe.projectK;
+        // update language level use
+        html.style.width = '70%';
+        css.style.width = '60%';
+        js.style.width = '5%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://insure-landing-page-azure.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/insure-landing-page');
+    })
+
+    twelve.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgL}">`;
+        overview.querySelector('p').textContent = describe.projectL;
+        // update language level use
+        html.style.width = '60%';
+        css.style.width = '60%';
+        js.style.width = '20%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://ping-coming-soon-kappa.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/ping-coming-soon');
+    })
+
+    thriteen.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgM}">`;
+        overview.querySelector('p').textContent = describe.projectM;
+        // update language level use
+        html.style.width = '60%';
+        css.style.width = '50%';
+        js.style.width = '5%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://project-tracker-ui.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/project-tracker-ui');
+    })
+
+    fourteen.addEventListener('click', (e) => {
+        profile.classList.add('hide');
+        overview.classList.remove('hide');
+        overview.classList.add('fade_in');
+        overview.querySelector('.image').innerHTML = `<img src="${imgN}">`;
+        overview.querySelector('p').textContent = describe.projectN;
+        // update language level use
+        html.style.width = '80%';
+        css.style.width = '70%';
+        js.style.width = '5%';
+        // update the links
+        document.querySelector('.live').setAttribute('href', 'https://two-column-landing.now.sh/');
+        document.querySelector('.code').setAttribute('href', 'https://github.com/lifeoncode/two-column-landing');
+    })
 
 
     document.querySelectorAll('.project').forEach(item => {

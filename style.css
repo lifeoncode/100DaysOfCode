@@ -542,7 +542,24 @@ main{
 .proj_h{
     background: url(./img/testimonials.jpg)no-repeat 0 0/cover;
 }
-
+.proj_i{
+    background: url(./img/base-apparel.jpg)no-repeat 0 0/cover;
+}
+.proj_j{
+    background: url(./img/bookmark-landing.jpg)no-repeat 0 0/cover;
+}
+.proj_k{
+    background: url(./img/insure-landing.jpg)no-repeat 0 0/cover;
+}
+.proj_l{
+    background: url(./img/ping.jpg)no-repeat 0 0/cover;
+}
+.proj_m{
+    background: url(./img/project-track.jpg)no-repeat 0 0/cover;
+}
+.proj_n{
+    background: url(./img/two-column.jpg)no-repeat 0 0/cover;
+}
 
 
 
